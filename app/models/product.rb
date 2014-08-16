@@ -6,4 +6,10 @@ class Product < ActiveRecord::Base
     with: %r{\.(gif|jpg|png)\Z}i,
     message: 'must be a URL for GIF, JPG or PNG image.'
   }
+  # return most recently updated product, thus makeing the pg re-render things only when things change
+  # template logic takes care of only rendering the products that actually change
+  def self.latest
+    Product.order(:updated_at).last
+  end
+
 end
