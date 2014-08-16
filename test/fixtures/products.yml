@@ -1,5 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
-
+# rails generated fixture
+# names one and two has no significance as far as database is concerned. just a way of referencing test data in test code
 one:
   title: MyString
   description: MyText
